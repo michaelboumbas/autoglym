@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Πρόταση Performance Marketing για την Autoglym Greece — Meta Ads, Google Ads & E-shop Growth.">
+    <title>Πρόταση Performance Marketing · Autoglym Greece</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --coal: #0f1119;
+            --deep: #1a1f36;
+            --slate: #2d3348;
+            --mid: #6b7280;
+            --silver: #9ca3af;
+            --mist: #e5e7eb;
+            --cloud: #f3f4f6;
+            --snow: #f9fafb;
+            --white: #ffffff;
+            --red: #c41230;
+            --red-soft: #dc2643;
+            --red-glow: rgba(196, 18, 48, 0.08);
+            --green: #059669;
+            --green-soft: rgba(5, 150, 105, 0.08);
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--deep);
+            background: var(--white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAV ── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--mist);
+            transition: transform 0.3s ease;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+        .nav-brand {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--deep);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .nav-brand span { color: var(--red); }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--mid);
+            text-decoration: none;
+            transition: color 0.2s;
+            letter-spacing: 0.01em;
+        }
+        .nav-links a:hover { color: var(--deep); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 10rem 2rem 6rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .hero-eyebrow {
+            font-family: var(--font-display);
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--mid);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: var(--coal);
+            max-width: 720px;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--red);
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--mid);
+            max-width: 580px;
+            line-height: 1.75;
+            margin-bottom: 2.5rem;
+        }
+        .hero-quote {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            color: var(--slate);
+            font-weight: 500;
+            padding-left: 1.25rem;
+            border-left: 3px solid var(--red);
+            margin-bottom: 3rem;
+            max-width: 500px;
+        }
+        .hero-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: var(--silver);
+        }
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: var(--red);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+            cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--red-soft); transform: translateY(-1px); }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: transparent;
+            color: var(--deep);
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1.5px solid var(--mist);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: border-color 0.2s, transform 0.15s;
+            cursor: pointer;
+        }
+        .btn-secondary:hover { border-color: var(--slate); transform: translateY(-1px); }
+
+        /* ── SECTIONS ── */
+        .section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+        .section-divider {
+            border: none;
+            height: 1px;
+            background: var(--mist);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-label {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--red);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--coal);
+            margin-bottom: 1rem;
+        }
+        .section-intro {
+            font-size: 1rem;
+            color: var(--mid);
+            max-width: 620px;
+            margin-bottom: 3rem;
+            line-height: 1.75;
+        }
+
+        /* ── GOALS ── */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .goal-card {
+            padding: 2rem;
+            border: 1px solid var(--mist);
+            border-radius: 12px;
+            transition: border-color 0.2s;
+        }
+        .goal-card:hover { border-color: var(--silver); }
+        .goal-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--coal);
+        }
+        .goal-card p {
+            font-size: 0.9rem;
+            color: var(--mid);
+            line-height: 1.7;
+        }
+        .goal-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .goal-icon.red { background: var(--red-glow); color: var(--red); }
+        .goal-icon.green { background: var(--green-soft); color: var(--green); }
+
+        /* ── STRATEGY ── */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .strategy-grid { grid-template-columns: 1fr; }
+        }
+        .strategy-card {
+            padding: 2rem;
+            border-radius: 12px;
+            background: var(--snow);
+            border: 1px solid var(--cloud);
+        }
+        .strategy-card.full {
+            grid-column: 1 / -1;
+        }
+        .strategy-card .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--red);
+            background: var(--red-glow);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .strategy-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--coal);
+            margin-bottom: 0.6rem;
+        }
+        .strategy-card p {
+            font-size: 0.9rem;
+            color: var(--mid);
+            line-height: 1.7;
+        }
+
+        /* ── DELIVERABLES ── */
+        .deliverables-header {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .deliverable-stat {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: var(--snow);
+            border: 1px solid var(--cloud);
+        }
+        .deliverable-stat .number {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--red);
+        }
+        .deliverable-stat .label {
+            font-size: 0.8rem;
+            color: var(--mid);
+            margin-top: 0.25rem;
+        }
+        .deliverables-list {
+            display: grid;
+            gap: 1rem;
+        }
+        .deliverable-item {
+            display: flex;
+            gap: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--mist);
+            align-items: flex-start;
+        }
+        .deliverable-item .di-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--red-glow);
+            color: var(--red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .deliverable-item h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--coal);
+            margin-bottom: 0.2rem;
+        }
+        .deliverable-item p {
+            font-size: 0.85rem;
+            color: var(--mid);
+            line-height: 1.6;
+        }
+
+        /* ── PROCESS ── */
+        .process-steps {
+            display: grid;
+            gap: 0;
+        }
+        .process-step {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 1.25rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--cloud);
+        }
+        .process-step:last-child { border-bottom: none; }
+        .process-step .step-num {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--snow);
+            border: 1px solid var(--mist);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--slate);
+        }
+        .process-step h4 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--coal);
+            margin-bottom: 0.3rem;
+        }
+        .process-step p {
+            font-size: 0.88rem;
+            color: var(--mid);
+            line-height: 1.65;
+        }
+
+        /* ── KPIS ── */
+        .kpi-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+        .kpi-tag {
+            padding: 0.5rem 1rem;
+            background: var(--snow);
+            border: 1px solid var(--mist);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--slate);
+        }
+        .kpi-note {
+            padding: 1.5rem;
+            background: var(--snow);
+            border-left: 3px solid var(--red);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.88rem;
+            color: var(--mid);
+            line-height: 1.7;
+        }
+        .kpi-note strong { color: var(--coal); }
+
+        /* ── WHY ME ── */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .why-card {
+            padding: 1.75rem;
+            border: 1px solid var(--mist);
+            border-radius: 12px;
+        }
+        .why-card h3 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--coal);
+            margin-bottom: 0.5rem;
+        }
+        .why-card p {
+            font-size: 0.88rem;
+            color: var(--mid);
+            line-height: 1.65;
+        }
+
+        /* ── PRICING ── */
+        .pricing-section {
+            background: var(--snow);
+            border-radius: 16px;
+            padding: 3rem;
+            border: 1px solid var(--mist);
+        }
+        .pricing-header {
+            margin-bottom: 2.5rem;
+        }
+        .pricing-header h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--coal);
+            margin-bottom: 0.4rem;
+        }
+        .pricing-header p {
+            font-size: 0.9rem;
+            color: var(--mid);
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 640px) {
+            .pricing-cards { grid-template-columns: 1fr; }
+            .pricing-section { padding: 2rem 1.5rem; }
+        }
+        .price-card {
+            background: var(--white);
+            border: 1.5px solid var(--mist);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+        .price-card.main { border-color: var(--red); }
+        .price-card .badge {
+            position: absolute;
+            top: -10px;
+            right: 16px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--white);
+            background: var(--red);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .price-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--coal);
+            margin-bottom: 0.3rem;
+        }
+        .price-card .price-sub {
+            font-size: 0.8rem;
+            color: var(--mid);
+            margin-bottom: 1.25rem;
+        }
+        .price-card .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .price-card .old-price {
+            font-size: 1rem;
+            color: var(--silver);
+            text-decoration: line-through;
+        }
+        .price-card .price {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--coal);
+        }
+        .price-card .price-period {
+            font-size: 0.85rem;
+            color: var(--mid);
+        }
+        .price-card .price-includes {
+            list-style: none;
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--cloud);
+        }
+        .price-card .price-includes li {
+            font-size: 0.83rem;
+            color: var(--mid);
+            padding: 0.3rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+        .price-card .price-includes li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+        .pricing-notes {
+            font-size: 0.78rem;
+            color: var(--silver);
+            line-height: 1.8;
+        }
+        .pricing-notes span {
+            display: block;
+        }
+
+        /* ── SEASONALITY ── */
+        .season-bar {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 4px;
+            margin: 2rem 0 1rem;
+        }
+        .season-month {
+            text-align: center;
+            padding: 0.6rem 0;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .season-month.peak {
+            background: var(--red-glow);
+            color: var(--red);
+        }
+        .season-month.mid-s {
+            background: rgba(234, 179, 8, 0.08);
+            color: #b45309;
+        }
+        .season-month.low {
+            background: var(--cloud);
+            color: var(--silver);
+        }
+        .season-legend {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.75rem;
+            color: var(--mid);
+            margin-bottom: 1rem;
+        }
+        .season-legend span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .season-legend .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .dot.peak-d { background: var(--red); }
+        .dot.mid-d { background: #eab308; }
+        .dot.low-d { background: var(--silver); }
+
+        /* ── CTA ── */
+        .cta-section {
+            text-align: center;
+            padding: 5rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--coal);
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        .cta-section p {
+            font-size: 0.95rem;
+            color: var(--mid);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--mist);
+            font-size: 0.75rem;
+            color: var(--silver);
+        }
+        .footer a {
+            color: var(--mid);
+            text-decoration: none;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 480px) {
+            .hero { padding: 7rem 1.25rem 4rem; }
+            .section { padding: 3.5rem 1.25rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .goals-grid { grid-template-columns: 1fr; }
+            .strategy-grid { grid-template-columns: 1fr; }
+            .season-bar { grid-template-columns: repeat(6, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="top">
+    <div class="nav-inner">
+        <a href="#top" class="nav-brand">Autoglym<span>.</span> Performance Proposal</a>
+        <ul class="nav-links">
+            <li><a href="#goals">Στόχοι</a></li>
+            <li><a href="#strategy">Στρατηγική</a></li>
+            <li><a href="#deliverables">Υπηρεσίες</a></li>
+            <li><a href="#process">Διαδικασία</a></li>
+            <li><a href="#whyme">Γιατί εγώ</a></li>
+            <li><a href="#pricing">Επένδυση</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <p class="hero-eyebrow">Πρόταση Performance Marketing · Ιούλιος 2026</p>
+    <h1>Οργανωμένο performance που <em>μετράει</em> — όχι αποσπασματικές κινήσεις.</h1>
+    <p class="hero-subtitle">Meta Ads, Google Ads & E-shop Growth για την επίσημη αντιπροσωπεία Autoglym στην Ελλάδα. Στόχος: κάθε ευρώ που μπαίνει στη διαφήμιση να επιστρέφει μετρημένο.</p>
+    <p class="hero-quote">«Αν δεν πας οργανωμένα, καις χρήμα.»</p>
+    <div class="hero-ctas">
+        <a href="#deliverables" class="btn-primary">Τι περιλαμβάνει →</a>
+        <a href="#pricing" class="btn-secondary">Επένδυση</a>
+    </div>
+    <div class="hero-meta">
+        <span>Mike Boumbas</span>
+        <span>·</span>
+        <span>Digital Marketing Specialist</span>
+        <span>·</span>
+        <span>Meta & Google Ads</span>
+    </div>
+</header>
+
+<hr class="section-divider">
+
+<!-- ΣΤΟΧΟΙ -->
+<section class="section" id="goals">
+    <p class="section-label">Στόχοι</p>
+    <h2>Τι θέλουμε να πετύχουμε</h2>
+    <p class="section-intro">Η Autoglym είναι ήδη leader στη χονδρική. Τώρα χτίζουμε το D2C κανάλι με performance-first προσέγγιση — κάθε ευρώ αποδίδει, κάθε κίνηση μετριέται.</p>
+
+    <div class="goals-grid">
+        <div class="goal-card">
+            <div class="goal-icon red">📈</div>
+            <h3>E-shop Revenue</h3>
+            <p>Αύξηση πωλήσεων μέσω του autoglym.gr με στόχο τα διαφημιστικά έξοδα να καλύπτονται πλήρως — και ιδανικά να ξεπερνιούνται. Break-even ROAS: 2.5–3.</p>
+        </div>
+        <div class="goal-card">
+            <div class="goal-icon red">🎯</div>
+            <h3>Μετρημένο Brand Awareness</h3>
+            <p>Αναγνωρισιμότητα που ενισχύει έμμεσα τη χονδρική — αλλά μόνο μέσα από performance καμπάνιες, remarketing και educated κοινά. Κανένα budget σε vanity metrics.</p>
+        </div>
+        <div class="goal-card">
+            <div class="goal-icon green">🔄</div>
+            <h3>Οργανωμένη Ροή</h3>
+            <p>Τέλος στις αποσπασματικές κινήσεις. Μηνιαίο πλάνο, σταθερή εκτέλεση, καθαρό reporting — ώστε να ξέρετε πάντα τι τρέχει, τι αποδίδει και τι αλλάζουμε.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ΣΤΡΑΤΗΓΙΚΗ -->
+<section class="section" id="strategy">
+    <p class="section-label">Στρατηγική</p>
+    <h2>Πώς θα τρέξουμε τα Ads</h2>
+    <p class="section-intro">Performance-first, educational approach. Εκπαιδεύουμε τον χρήστη και μετά τον οδηγούμε στην αγορά — ακριβώς όπως λειτουργεί η αγορά του car care.</p>
+
+    <div class="strategy-grid">
+        <div class="strategy-card">
+            <span class="tag">Meta Ads</span>
+            <h3>Dynamic Product Ads (DPA)</h3>
+            <p>Δυναμικός κατάλογος που τραβάει προϊόντα απευθείας από το e-shop. Κάθε χρήστης βλέπει αυτό που είναι πιο πιθανό να αγοράσει — με βάση το προφίλ και τα ενδιαφέροντά του.</p>
+        </div>
+        <div class="strategy-card">
+            <span class="tag">Meta Ads</span>
+            <h3>Remarketing & Educated Audiences</h3>
+            <p>Καμπάνιες σε κοινά που ήδη γνωρίζουν το brand: επισκέπτες e-shop, αγοραστές, video viewers. Educational content που δείχνει τη χρήση, ωθεί σε repeat purchase και χτίζει εμπιστοσύνη.</p>
+        </div>
+        <div class="strategy-card">
+            <span class="tag">Google Ads</span>
+            <h3>Branded Campaign</h3>
+            <p>Όποιος ψάχνει «Autoglym» ή «αυτογκλίμ» βρίσκει εμάς πρώτους — πάντα. Μικρό budget, μεγάλη αξία: δεν χάνουμε κανέναν που ήδη μας ψάχνει.</p>
+        </div>
+        <div class="strategy-card">
+            <span class="tag">Google Ads</span>
+            <h3>Performance Max (PMAX)</h3>
+            <p>Μία ελαφριά PMAX για αναζητήσεις τύπου «φροντίδα αυτοκινήτου», «κέρωμα αμαξιού» κλπ. Αφήνουμε τη Google να βρει αγοραστές σε Search, Display & Shopping ταυτόχρονα.</p>
+        </div>
+        <div class="strategy-card full">
+            <span class="tag">Φιλοσοφία</span>
+            <h3>Educate First, Sell Second</h3>
+            <p>Η αγορά car care λειτουργεί educational: ο χρήστης πρώτα ψάχνει «πώς γυαλίζω το αμάξι μου» και μετά αγοράζει. Αξιοποιούμε τα blogs και τα how-to βίντεο σας ως top-of-funnel, χτίζουμε custom audiences από αυτά, και οδηγούμε στο e-shop με remarketing. Τα ήδη εξαιρετικά SEO αποτελέσματα γίνονται πολλαπλασιαστής: paid και organic δουλεύουν μαζί.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ΕΠΟΧΙΚΟΤΗΤΑ -->
+<section class="section" id="seasonality">
+    <p class="section-label">Εποχικότητα</p>
+    <h2>Το budget ακολουθεί τη ζήτηση</h2>
+    <p class="section-intro">Το car care είναι εποχικό: peak άνοιξη–φθινόπωρο, πτώση ~40% τον χειμώνα. Δεν σπαταλάμε budget σε νεκρές περιόδους — το αυξομειώνουμε ανάλογα.</p>
+
+    <div class="season-bar">
+        <div class="season-month low">ΙΑΝ</div>
+        <div class="season-month low">ΦΕΒ</div>
+        <div class="season-month mid-s">ΜΑΡ</div>
+        <div class="season-month peak">ΑΠΡ</div>
+        <div class="season-month peak">ΜΑΪ</div>
+        <div class="season-month peak">ΙΟΥΝ</div>
+        <div class="season-month peak">ΙΟΥΛ</div>
+        <div class="season-month peak">ΑΥΓ</div>
+        <div class="season-month peak">ΣΕΠ</div>
+        <div class="season-month peak">ΟΚΤ</div>
+        <div class="season-month mid-s">ΝΟΕ</div>
+        <div class="season-month low">ΔΕΚ</div>
+    </div>
+    <div class="season-legend">
+        <span><span class="dot peak-d"></span> Peak Season — Full Budget</span>
+        <span><span class="dot mid-d"></span> Μεταβατική</span>
+        <span><span class="dot low-d"></span> Off Season — Μειωμένο Budget</span>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ΤΙ ΠΕΡΙΛΑΜΒΑΝΕΙ -->
+<section class="section" id="deliverables">
+    <p class="section-label">Υπηρεσίες</p>
+    <h2>Τι περιλαμβάνει η διαχείριση</h2>
+    <p class="section-intro">Setup, βελτιστοποίηση, reporting — εγώ τρέχω ολόκληρο τον κύκλο ζωής των καμπανιών. Εσείς εγκρίνετε και αποφασίζετε.</p>
+
+    <div class="deliverables-list">
+        <div class="deliverable-item">
+            <div class="di-icon">⚡</div>
+            <div>
+                <h4>Meta Ads Management</h4>
+                <p>Setup, δημιουργία και βελτιστοποίηση καμπανιών στο Meta (Facebook & Instagram). DPA, remarketing, prospecting — δοκιμάζουμε, μετράμε, κλιμακώνουμε ό,τι δουλεύει.</p>
+            </div>
+        </div>
+        <div class="deliverable-item">
+            <div class="di-icon">🔍</div>
+            <div>
+                <h4>Google Ads Management</h4>
+                <p>Branded campaign + Performance Max. Εμφάνιση στις αναζητήσεις για το brand name και βασικά keywords car care. Setup, monitoring & optimization.</p>
+            </div>
+        </div>
+        <div class="deliverable-item">
+            <div class="di-icon">📊</div>
+            <div>
+                <h4>Monthly Reporting</h4>
+                <p>Αναφορά στο τέλος κάθε μήνα με ROAS, CPA, CTR, revenue, τι δούλεψε, τι δεν δούλεψε και τι αλλάζουμε τον επόμενο μήνα. Καθαρά νούμερα, χωρίς fluff.</p>
+            </div>
+        </div>
+        <div class="deliverable-item">
+            <div class="di-icon">🧪</div>
+            <div>
+                <h4>A/B Testing & Optimization</h4>
+                <p>Συνεχές testing σε creatives, audiences, copy και bidding strategies. Try and error μεθοδολογία — δοκιμάζουμε, μαθαίνουμε, βελτιώνουμε.</p>
+            </div>
+        </div>
+        <div class="deliverable-item">
+            <div class="di-icon">🏷️</div>
+            <div>
+                <h4>Product Feed & Κατάλογος</h4>
+                <p>Setup και optimization του product feed για τις δυναμικές καμπάνιες. Τα προϊόντα του e-shop εμφανίζονται σωστά, με τιμές, εικόνες και deep links.</p>
+            </div>
+        </div>
+        <div class="deliverable-item">
+            <div class="di-icon">🔧</div>
+            <div>
+                <h4>Αρχικό Audit & Setup — Δωρεάν</h4>
+                <p>Πλήρης έλεγχος των υπαρχόντων λογαριασμών, pixel/tag setup, conversion tracking, attribution. Σωστά θεμέλια πριν τρέξει οτιδήποτε — χωρίς κόστος.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ΠΩΣ ΔΟΥΛΕΥΟΥΜΕ -->
+<section class="section" id="process">
+    <p class="section-label">Διαδικασία</p>
+    <h2>Πώς δουλεύουμε μαζί</h2>
+    <p class="section-intro">Ξεκάθαροι ρόλοι, ξεκάθαρη ροή. Εσείς δίνετε το υλικό και τη γνώση του προϊόντος — εγώ τα μετατρέπω σε αποτέλεσμα.</p>
+
+    <div class="process-steps">
+        <div class="process-step">
+            <div class="step-num">01</div>
+            <div>
+                <h4>Audit & Setup</h4>
+                <p>Παίρνω πρόσβαση στα accounts, ελέγχω ιστορικά data, στήνω tracking και attribution σωστά. Ό,τι χρειάζεται ώστε κάθε conversion να καταγράφεται σωστά.</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <div class="step-num">02</div>
+            <div>
+                <h4>Στρατηγική & Πλάνο</h4>
+                <p>Με βάση το audit, φτιάχνω το πλάνο του πρώτου μήνα: ποιες καμπάνιες, ποια κοινά, ποια creatives. Σας το παρουσιάζω για έγκριση πριν τρέξει οτιδήποτε.</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <div class="step-num">03</div>
+            <div>
+                <h4>Εσείς δίνετε υλικό & τεχνική γνώση</h4>
+                <p>Βίντεο από UK, UGC, φωτογραφίες προϊόντων, blogs. Τα τεχνικά κείμενα περνάνε πάντα από εσάς — εσείς ξέρετε το προϊόν καλύτερα από τον καθένα.</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <div class="step-num">04</div>
+            <div>
+                <h4>Εγώ τρέχω & βελτιστοποιώ</h4>
+                <p>Setup campaigns, ad creation, daily monitoring, bid optimization, A/B testing. Παρακολουθώ καθημερινά, κάνω adjustments, σκοτώνω ό,τι δεν αποδίδει.</p>
+            </div>
+        </div>
+        <div class="process-step">
+            <div class="step-num">05</div>
+            <div>
+                <h4>Report & Επόμενος Μήνας</h4>
+                <p>Στο τέλος του μήνα: τι πετύχαμε, τι μάθαμε, τι αλλάζουμε. Αποφασίζουμε μαζί τη στρατηγική του επόμενου μήνα με βάση πραγματικά δεδομένα.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- KPIS -->
+<section class="section" id="kpis">
+    <p class="section-label">KPIs & Αναφορές</p>
+    <h2>Τι μετράμε — τα νούμερα που μετράνε</h2>
+    <p class="section-intro">Performance σημαίνει αποτέλεσμα. Αυτά είναι τα μετρήσιμα KPIs που παρακολουθούμε κάθε μήνα.</p>
+
+    <div class="kpi-tags">
+        <span class="kpi-tag">ROAS (Return on Ad Spend)</span>
+        <span class="kpi-tag">Revenue από Ads</span>
+        <span class="kpi-tag">CPA (Cost per Acquisition)</span>
+        <span class="kpi-tag">CTR (Click-Through Rate)</span>
+        <span class="kpi-tag">Conversion Rate</span>
+        <span class="kpi-tag">Add to Cart Rate</span>
+        <span class="kpi-tag">Cost per Click</span>
+        <span class="kpi-tag">Impressions & Reach</span>
+    </div>
+
+    <div class="kpi-note">
+        <strong>Στόχος ROAS:</strong> Break-even στο 2.5–3. Ιστορικά η Autoglym Greece έχει πιάσει 4.5–5 σε οργανωμένες περιόδους — αυτό είναι το benchmark μας. Κάθε αναφορά θα δείχνει ξεκάθαρα αν βγάζουμε τα λεφτά μας πίσω ή όχι.
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ΓΙΑΤΙ ΕΓΩ -->
+<section class="section" id="whyme">
+    <p class="section-label">Γιατί εγώ</p>
+    <h2>Εμπειρία που μετράει</h2>
+
+    <div class="why-grid">
+        <div class="why-card">
+            <h3>Viral Passion</h3>
+            <p>Δύο χρόνια hands-on σε ένα από τα κορυφαία performance marketing agencies στην Ελλάδα. Meta, TikTok & Google Ads — DPA, remarketing, scaling. Ξέρω τι μετατρέπει budget σε πωλήσεις.</p>
+        </div>
+        <div class="why-card">
+            <h3>E-shop Expertise</h3>
+            <p>Εμπειρία σε e-commerce performance: δυναμικοί κατάλογοι, product feeds, conversion tracking, attribution. Πελάτες σαν τη Lodge Cast Iron μου έδωσαν ROAS 4.5–5.</p>
+        </div>
+        <div class="why-card">
+            <h3>AI-Powered Workflow</h3>
+            <p>Χρήση Claude, HeyGen & automation tools — agency-level output σε freelancer ταχύτητα και κόστος. Γι' αυτό η τιμή βγαίνει σε αυτό το επίπεδο.</p>
+        </div>
+        <div class="why-card">
+            <h3>Dedicated Focus</h3>
+            <p>Δεν είστε ένας από 50 πελάτες σε agency. Λίγα projects, πλήρης αφοσίωση, WhatsApp ανοιχτό, γρήγορες αντιδράσεις — και 10 λεπτά μακριά στον Νέο Κόσμο.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ΕΠΕΝΔΥΣΗ -->
+<section class="section" id="pricing">
+    <p class="section-label">Επένδυση</p>
+    <h2>Phase 1 · Εκκίνηση</h2>
+    <p class="section-intro">Εισαγωγικές τιμές για τη θεμελίωση. Ξεκινάμε, μετράμε, αποδεικνύουμε — και κλιμακώνουμε μαζί.</p>
+
+    <div class="pricing-section">
+        <div class="pricing-header">
+            <h3>Η επένδυσή σας</h3>
+            <p>Αμοιβή διαχείρισης — το ad spend δεν περιλαμβάνεται</p>
+        </div>
+
+        <div class="pricing-cards">
+            <div class="price-card main">
+                <span class="badge">Core</span>
+                <h4>Performance Ads Management</h4>
+                <p class="price-sub">Meta Ads + Google Ads · πλήρης διαχείριση</p>
+                <div class="price-row">
+                    <span class="old-price">€350</span>
+                </div>
+                <div class="price-row">
+                    <span class="price">€250</span>
+                    <span class="price-period">/ μήνα</span>
+                </div>
+                <ul class="price-includes">
+                    <li>Meta Ads: DPA, remarketing, prospecting</li>
+                    <li>Google Ads: Branded + Performance Max</li>
+                    <li>A/B testing & optimization</li>
+                    <li>Product feed setup & management</li>
+                    <li>Μηνιαία αναφορά & στρατηγική</li>
+                    <li>Αρχικό audit & tracking setup — δωρεάν</li>
+                </ul>
+            </div>
+
+            <div class="price-card">
+                <h4>Email Marketing</h4>
+                <p class="price-sub">Προαιρετικό add-on · 4 newsletters / μήνα</p>
+                <div class="price-row">
+                    <span class="old-price">€100</span>
+                </div>
+                <div class="price-row">
+                    <span class="price">€50</span>
+                    <span class="price-period">/ μήνα</span>
+                </div>
+                <ul class="price-includes">
+                    <li>4 emails / μήνα στη βάση δεδομένων</li>
+                    <li>Content creation & copywriting</li>
+                    <li>Θεματικές σε συνεννόηση μαζί σας</li>
+                    <li>Educational & promotional mix</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="kpi-note" style="margin-bottom: 1.5rem;">
+            <strong>Εφάπαξ κόστος setup:</strong> Αν χρειαστεί δημιουργία νέων λογαριασμών, συνδέσεων ή τεχνικών ρυθμίσεων που δεν υπάρχουν αυτή τη στιγμή, το κόστος θα είναι έως €200 εφάπαξ — ανάλογα με τις ανάγκες.
+        </div>
+
+        <div class="pricing-notes">
+            <span>1. Το ad spend (≈€1.000/μήνα) χρεώνεται ξεχωριστά, απευθείας στα Meta & Google accounts σας.</span>
+            <span>2. Το ad spend προσαρμόζεται εποχικά — μείωση τους χειμερινούς μήνες, αύξηση στο peak.</span>
+            <span>3. Το πρωτογενές υλικό (βίντεο, φωτό, τεχνικά κείμενα) παρέχεται από την Autoglym Greece.</span>
+            <span>4. Το email marketing μπορεί να ενεργοποιηθεί οποιαδήποτε στιγμή κατά τη διάρκεια της συνεργασίας.</span>
+            <span>5. Τρόποι πληρωμής: Revolut · Snappy · Iris · Από κοντά</span>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+    <h2>Πάμε να βάλουμε το performance σε σειρά.</h2>
+    <p>Ένα σύντομο kick-off, πρόσβαση στα accounts, audit — και ξεκινάμε. Είμαστε στο peak season και κάθε μέρα χωρίς οργανωμένη διαφήμιση είναι χαμένες πωλήσεις.</p>
+    <a href="mailto:weareneoagency@gmail.com?subject=Autoglym%20Performance%20Marketing%20Proposal" class="btn-primary">Ας μιλήσουμε →</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>Mike Boumbas · <a href="mailto:weareneoagency@gmail.com">weareneoagency@gmail.com</a> · Digital Marketing Specialist</p>
+    <p style="margin-top: 0.5rem;">Πρόταση Performance Marketing · Autoglym Greece · 2026</p>
+</footer>
+
+</body>
+</html>
